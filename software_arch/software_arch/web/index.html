@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Field Tracker - Water & Moisture Control</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- Chart.js for a small, professional moisture trend chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand">
+        <div class="logo">🌿</div>
+        <div class="title">Field Tracker</div>
+      </div>
+      <nav class="top-nav">
+        <a href="#" class="nav-link">Map</a>
+        <a href="#" class="nav-link">Fields</a>
+        <a href="#" class="nav-link">Warehouses</a>
+        <a href="#" class="nav-link">Weather</a>
+        <a href="#" class="nav-link active">Water & Moisture Control</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      <section class="panel">
+        <div class="panel-header">
+          <h1>Water & Moisture Control</h1>
+          <div class="panel-actions">
+            <select id="cropSelect" class="select">
+              <!-- Placeholder; later populate from backend DB -->
+              <option value="wheat">Wheat</option>
+              <option value="corn">Corn</option>
+              <option value="tomato">Tomato</option>
+              <option value="sunflower">Sunflower</option>
+              <option value="cotton">Cotton</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid">
+          <div class="card">
+            <div class="metric">
+              <div class="metric-label">Current Soil Moisture</div>
+              <div class="metric-value" id="currentMoisture">--%</div>
+            </div>
+            <div class="metric">
+              <div class="metric-label">Target Range</div>
+              <div class="metric-sub" id="targetRange">--% – --%</div>
+            </div>
+            <div class="status" id="statusBadge">Waiting for sensor...</div>
+          </div>
+
+          <div class="card">
+            <div class="pump">
+              <div class="pump-indicator" id="pumpIndicator"></div>
+              <div class="pump-label" id="pumpLabel">Pump OFF</div>
+            </div>
+            <div class="controls">
+              <button class="btn btn-primary" id="btnStart">💧 Start Watering</button>
+              <button class="btn btn-ghost" id="btnStop">⛔ Stop Watering</button>
+            </div>
+            <div class="hint">Manual controls temporarily override automatic irrigation.</div>
+          </div>
+
+          <div class="card chart-card">
+            <div class="chart-header">
+              <div class="chart-title">Moisture Trend (last 2 minutes)</div>
+            </div>
+            <canvas id="moistureChart" height="140"></canvas>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="app-footer">© 2025 Field Tracker</footer>
+
+    <script type="module" src="assets/js/waterControl.js"></script>
+  </body>
+  </html>
+
+

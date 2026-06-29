@@ -1,0 +1,4 @@
+uydu görüntü
+scrool düzenleme
+veri grafik
+bilgi kısmı
