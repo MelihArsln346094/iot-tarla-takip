@@ -4,7 +4,6 @@
 [![UI Framework](https://img.shields.io/badge/UI-Tkinter-orange.svg)](https://docs.python.org/3/library/tkinter.html)
 [![Database](https://img.shields.io/badge/database-SQLite-lightgrey.svg)](https://www.sqlite.org/)
 [![Hardware](https://img.shields.io/badge/hardware-Arduino-00979D.svg)](https://www.arduino.cc/)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
 Field Tracker, modern tarım işletmelerinin ve çiftçilerin tarlalarını, ürünlerini, depolarını ve sulama sistemlerini tek bir merkezden akıllıca yönetebilmeleri için geliştirilmiş, donanım entegrasyonuna sahip **masaüstü ve web simülasyonu** tabanlı bir yönetim sistemidir.
 
@@ -137,5 +136,3 @@ SQLite üzerinde aşağıdaki tablolar dinamik olarak yönetilir:
 4.  Dalı push edin (`git push origin ozellik/yeniOzellik`).
 5.  Bir Pull Request oluşturun.
 
-## 📄 Lisans
-Bu proje **MIT Lisansı** altında lisanslanmıştır. Detaylar için lisans şartlarını inceleyebilirsiniz.
